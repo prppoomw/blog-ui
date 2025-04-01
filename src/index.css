@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+body {
+    background-color: azure;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+}

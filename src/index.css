@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-    background-color: azure;
+    background-color: aliceblue;
     width: 100vw;
     overflow-x: hidden;
     font-family: "Montserrat", sans-serif;

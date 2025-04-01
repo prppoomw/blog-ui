@@ -2,4 +2,4 @@
 
 - git clone url
 - npm install
-- npm run decv
+- npm run dev

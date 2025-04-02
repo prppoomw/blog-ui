@@ -1,5 +1,8 @@
 import React from 'react';
 import {Link} from "react-router";
+import MainCategories from "../components/MainCategories.jsx";
+import FeaturedPosts from "../components/FeaturedPosts.jsx";
+import PostList from "../components/PostList.jsx";
 
 const Homepage = () => {
     return (
@@ -19,6 +22,12 @@ const Homepage = () => {
                     Unlock a world of ideas, stories, and insights. Whether you're here to learn,
                     grow, or just get inspired, our blog has something for everyone.
                 </p>
+            </div>
+            <MainCategories />
+            <FeaturedPosts />
+            <div className="mt-8">
+                <h1 className="my-8 text-2xl text-slate-600">Recent Posts</h1>
+                <PostList />
             </div>
         </div>
     );

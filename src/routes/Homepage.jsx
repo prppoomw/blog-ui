@@ -26,7 +26,7 @@ const Homepage = () => {
             <MainCategories />
             {/*<FeaturedPosts />*/}
             <div className="mt-8">
-                <h1 className="my-8 text-2xl text-slate-600">Recent Posts</h1>
+                <h1 className="my-8 text-2xl text-slate-600">All Posts</h1>
                 <PostList />
             </div>
         </div>

@@ -24,7 +24,7 @@ const Homepage = () => {
                 </p>
             </div>
             <MainCategories />
-            <FeaturedPosts />
+            {/*<FeaturedPosts />*/}
             <div className="mt-8">
                 <h1 className="my-8 text-2xl text-slate-600">Recent Posts</h1>
                 <PostList />

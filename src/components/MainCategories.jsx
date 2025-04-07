@@ -9,7 +9,7 @@ const MainCategories = () => {
                 <Link to="../posts" className="bg-slate-900 text-white rounded-full px-4 py-2">All Topic</Link>
                 <Link to="../posts?category=Kafka" className="hover:bg-slate-100 rounded-full px-4 py-2">Kafka</Link>
                 <Link to="../posts?category=Java" className="hover:bg-slate-100 rounded-full px-4 py-2">Java</Link>
-                <Link to="../posts?category=SpringBoot" className="hover:bg-slate-100 rounded-full px-4 py-2">Spring Boot</Link>
+                <Link to="../posts?category=Spring%20Boot" className="hover:bg-slate-100 rounded-full px-4 py-2">Spring Boot</Link>
                 <Link to="../posts?category=React" className="hover:bg-slate-100 rounded-full px-4 py-2">React</Link>
                 <Link to="../posts?category=database" className="hover:bg-slate-100 rounded-full px-4 py-2">Database</Link>
             </div>

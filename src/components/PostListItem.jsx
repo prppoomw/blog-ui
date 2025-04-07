@@ -1,28 +1,32 @@
 import React from 'react';
 import Image from "./Image.jsx";
 import {Link} from "react-router";
+import { format } from "timeago.js";
 
-const PostListItem = () => {
+const PostListItem = ({post}) => {
+    const categories = post.category || [];
+
     return (
-        <div className="flex flex-col xl:flex-row gap-8">
-            <div className="md:hidden xl:block xl:w-1/3">
-                <Image src="kafka-ep2.webp" className="rounded-2xl object-cover" w="735" />
-            </div>
+        <div className="flex flex-col xl:flex-row gap-8 mb-12">
+            {post.img && <div className="md:hidden xl:block xl:w-1/3">
+                <Image src={post.img} className="rounded-2xl object-cover" w="735" />
+            </div>}
             <div className="flex flex-col gap-4 xl:w-2/3">
-                <Link to="../test" className="text-4xl font-semibold">Kafka Broker & Replication</Link>
+                <Link to={`../${post.slug}`} className="text-4xl font-semibold">{post.title}</Link>
                 <div className="flex items-center gap-2 text-slate-400 text-sm">
                     <span>Written by</span>
-                    <Link to="../" className="text-blue-600">prppoomw</Link>
-                    <span>3 days ago</span>
+                    <Link to="../" className="text-blue-600">{post.username}</Link>
+                    <span>{format(post.createdAt)}</span>
                 </div>
-                <p>จาก บทความก่อนหน้า ที่เราได้มีการพูดถึง Kafka กันไปและมีการพูดถึง Topics, Partitions และ Offsets
-                    กันไปแล้วในบทความนี้เราจะมาพูดถึงเจ้า Kafka Broker และการทำ Replication กัน</p>
-                <Link to="../test" className="underline text-blue-600 text-sm">Read More</Link>
+                <p>{post.desc}</p>
+                <Link to={`../${post.slug}`} className="underline text-blue-600 text-sm">Read More</Link>
                 <div className="flex items-center gap-2 text-slate-400 text-sm">
                     <span>Topic:</span>
-                    <Link to="../" className="text-blue-600">Spring Boot</Link>
-                    <Link to="../" className="text-blue-600">Java</Link>
-                    <Link to="../" className="text-blue-600">Kafka</Link>
+                    {categories.map((topic) => (
+                        <Link key={topic} to={`../posts?category=${topic}`} className="text-blue-600">
+                            {topic}
+                        </Link>
+                    ))}
                 </div>
             </div>
         </div>
